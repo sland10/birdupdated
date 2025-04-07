@@ -6,18 +6,12 @@
 
 body {
   font-family: "Barlow", sans-serif;
+  background-image: url("images/birdbackground.png")
 }
-
 h2 {
-  background-color:aquamarine;
-  color:orangered;
-text-align:center;
+  color: orangered;
+  text-align: center;
 }
-
-
-
-
-
 /*NAVIGATION*/ /*NAVIGATION*/ /*NAVIGATION*/ /*NAVIGATION*/
 .nav {
   width: 100%;
@@ -46,7 +40,6 @@ li a:hover:not(.active) {
   background-color: teal;
 }
 /* END NAVIGATION*/
-
 header {
   background-color: hotpink;
   text-align: center;
@@ -59,79 +52,65 @@ header {
 }
 .flex-container {
   display: flex;
-  background-color: cornflowerblue;}
-
+  background-color: cornflowerblue;
+}
 .flex-section {
   width: 50%;
-  
   padding: 50px;
   font-size: 22px;
 }
 /*END CONTAINERS*/
-
 /*GALLERY CSS*/
 .row {
   margin: 8px -16px;
 }
-
 /* Add padding BETWEEN each column */
-.row,
-.row > .column {
+.row, .row > .column {
   padding: 8px;
 }
-
 /* Create four equal columns that floats next to each other */
 .column {
   float: left;
   width: 25%;
 }
-
-/* Clear floats after rows */ 
+/* Clear floats after rows */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
 /* Content */
 .content {
   background-color: white;
   padding: 10px;
 }
-
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
+/* tablets and desktop */
+@media only screen and (min-width: 999px) {
+  .container {
+    background-color: darkblue
+  }
+}
+@media only screen and (max-width: 768px) {
+  .column {
+    width: 50%;
+  }
+  .container {
+    background-color: deeppink
+  }
+}
+@media (max-width: 600px) {
+  .nav {
+    display: block;
+  }
+  .container {
+    margin: 0 auto;
+    background-color: crimson;
+  }
   .column {
     width: 50%;
   }
 }
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-
-
-
-
-
-@media (max-width: 999px) {
-  .container {
-    width: 90%;
-    margin: 0 auto;
-    background-color: darkgoldenrod;
-  }
-}
-/*PHONE*/
-@media (max-width: 600px) {
-  .nav {
-    flex-direction: column
-  }
-  .container {
-    width: 90%;
-    margin: 0 auto;
-    background-color: crimson;
-  }
+@media print {
+  /*this is if you want a print version of your page. */
 }
