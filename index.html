@@ -14,11 +14,11 @@
 
 
  
-  
+  <header><img src="images/logosmall.png" alt="birdlogo"></header>
   
   <!--NAVIGATION--><!--NAVIGATION--><!--NAVIGATION-->
 <nav>
-    <ul>
+    <ul class="topnav">
   <li><a href="index.html">Home</a></li>
   <li><a  href="about.html">About</a></li>
   <li><a  href="contact.html">Contact</a></li>
@@ -27,11 +27,50 @@
 </nav>
 <!-- END NAVIGATION-->
   <header>
-  <h1>Bird-e-Portfolio</h1>
+  
 </header>
 <body>
-
-
+<div class="flex-container">
+ 
+    <div class="flex-section">
+        <img src="images/self.jpg" alt="me" width="100%" > </div>
+    
+    <div class="flex-section">
+        <h1>Welcome
+            <br>to
+            <br>
+        Bird-E-Portfolio</h1>
+        <p></p> 
+    
+    
+    
+    </div>
+    
+</div>
 </body>
 
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function success(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function error() {
+  alert("Sorry, no position available.");
+}
+</script>
 </html>

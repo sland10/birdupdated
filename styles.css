@@ -8,51 +8,59 @@ body {
   font-family: "Barlow", sans-serif;
   background-image: url("images/birdbackground.png")
 }
+header{margin:auto;
+text-align: center;}
+
+h1{text-align:center;
+    color:rgba(0,49,62,1.00);
+    text-shadow: 2px 1px olive ;
+    
+    
+    
+}
 h2 {
   color: orangered;
   text-align: center;
+    text-decoration-line: underline;
+  text-decoration-style: wavy;
 }
+h3{
+  color:darkolivegreen;
+    text-align:center;
+}
+
 /*NAVIGATION*/ /*NAVIGATION*/ /*NAVIGATION*/ /*NAVIGATION*/
-.nav {
-  width: 100%;
-  height: 50px;
-  margin: 10px 0 10px 0;
-  padding-top: 10px;
-  font-size: 30px;
-}
-ul {
+ul.topnav {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: cadetblue;
+  background-color: teal;
 }
-li {
-  float: left;
-}
-li a {
+ul.topnav li {float: left;}
+ul.topnav li a {
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
+  text-decoration: none;
 }
-li a:hover:not(.active) {
-  background-color: teal;
-}
+ul.topnav li a:hover:not(.active) {background-color:cadetblue;}
+ul.topnav li a.active {background-color:olive;}
 /* END NAVIGATION*/
-header {
-  background-color: hotpink;
-  text-align: center;
-}
+
 /*CONTAINERS*/ /*CONTAINERS*/ /*CONTAINERS*/ /*CONTAINERS*/
 .container {
-  width: 1000px;
-  margin: auto;
-  background-color: burlywood
+  width: 100%;
+  margin:auto;
+ 
 }
 .flex-container {
+    width:90%;
   display: flex;
-  background-color: cornflowerblue;
+    
+    margin:auto;
+  
 }
 .flex-section {
   width: 50%;
@@ -62,16 +70,18 @@ header {
 /*END CONTAINERS*/
 /*GALLERY CSS*/
 .row {
-  margin: 8px -16px;
+  margin:20px;
+    padding:28px;
 }
 /* Add padding BETWEEN each column */
 .row, .row > .column {
+    
   padding: 8px;
 }
 /* Create four equal columns that floats next to each other */
 .column {
   float: left;
-  width: 25%;
+  width: 50%;
 }
 /* Clear floats after rows */
 .row:after {
@@ -83,34 +93,35 @@ header {
 .content {
   background-color: white;
   padding: 10px;
+    margin:auto;
 }
 /* Responsive layout - makes a two column-layout instead of four columns */
 /* tablets and desktop */
 @media only screen and (min-width: 999px) {
   .container {
-    background-color: darkblue
+    
   }
 }
 @media only screen and (max-width: 768px) {
   .column {
     width: 50%;
   }
-  .container {
-    background-color: deeppink
-  }
+  
 }
 @media (max-width: 600px) {
-  .nav {
-    display: block;
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+      
+  
   }
   .container {
     margin: 0 auto;
-    background-color: crimson;
+    
   }
   .column {
     width: 50%;
   }
-}
+
 @media print {
   /*this is if you want a print version of your page. */
 }
