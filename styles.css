@@ -115,7 +115,7 @@ ul.topnav li a.active {
     margin: auto;
   }
 }
-@media (max-width : 200px) {
+@media (max-width : 600px) {
   ul.topnav li.right, ul.topnav li {
     float: none;
   }
