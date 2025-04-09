@@ -126,6 +126,14 @@ ul.topnav li a.active {
 .column {
   width: 50%;
 }
+
+.flex-container {
+    flex-direction: column;
+  }
+  .flex-section {
+    width: 90%;
+    margin: auto;
+  }
 @media print {
   /*this is if you want a print version of your page. */
 }
