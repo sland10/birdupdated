@@ -3,22 +3,36 @@
 * {
   box-sizing: border-box;
 }
+
+.pompiere-regular {
+  font-family: "Pompiere", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
-  font-family: "Barlow", sans-serif;
-  background-image: url("images/birdbackground.png");
-    background-size: cover;
-    background-attachment: fixed;
+  
+  background-image: url("images/bg.png");
+   background-size: cover;
+    color:white;
+   
     
+     
 }
 header {
+    
+  font-family: "Rum Raisin", sans-serif;
+  font-size: 60px;
+  font-style: normal;
   margin: auto;
   text-align: center;
 }
 h1 {
+  
   text-align: center;
   color: rgba(0, 49, 62, 1.00);
   text-shadow: 2px 1px olive;
-  font-size: 60px;
+  font-size: 80px;
 }
 h2 {
   color: orangered;
@@ -34,7 +48,7 @@ ul.topnav {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: teal;
+  background-color:hsla(194,100%,13%,1.00);
 }
 ul.topnav li {
   float: left;
@@ -44,33 +58,54 @@ ul.topnav li a {
   color: white;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
+  text-decoration:none;
 }
 ul.topnav li a:hover:not(.active) {
-  background-color: cadetblue;
+  background-color:hsla(17,100%,45%,1.00);
 }
 ul.topnav li a.active {
   background-color: olive;
 }
 /* END NAVIGATION*/
 
+.button {
+  background-color: #088F8F;
+  color:white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 60px;
+  cursor: pointer;
+}
+
 
 /*CONTAINERS*/ /*CONTAINERS*/ /*CONTAINERS*/ /*CONTAINERS*/
 .container {
-  width: 100%;
+  width: 90%;
   margin: auto;
+    padding:20px;
+    
 }
 .flex-container {
-  width: 90%;
+width: 98%;
   display: flex;
   margin: auto;
+    
 }
 .flex-section {
-  width: 500px;
- height:500px;
-  padding: 50px;
+    margin:auto;
+  width: 50%;
+ height:50%;
+    padding:5px 10px;
   font-size: 22px;
+    background-color:hsla(187,100%,18%,0.95);
+    
+    
 }
+
+
+
 /*END CONTAINERS*/
 /*GALLERY CSS*/
 .row {
@@ -98,42 +133,9 @@ ul.topnav li a.active {
   padding: 10px;
   margin: auto;
 }
-/* Responsive layout - makes a two column-layout instead of four columns */
-/* tablets and desktop */
-@media only screen and (min-width: 999px) {
-  .container {}
-}
-@media only screen and (max-width: 768px) {
-  .column {
-    width: 50%;
-  }
-  .flex-container {
-    flex-direction: column;
-  }
-  .flex-section {
-    width: 90%;
-    margin: auto;
-  }
-}
-@media (max-width : 600px) {
-  ul.topnav li.right, ul.topnav li {
-    float: none;
-  }
-}
-.container {
-  margin: 0 auto;
-}
-.column {
-  width: 50%;
-}
 
-.flex-container {
+@media (max-width: 700px) {
+  .container,.ul.topnav, .flex-container {   
     flex-direction: column;
   }
-  .flex-section {
-    width: 90%;
-    margin: auto;
-  }
-@media print {
-  /*this is if you want a print version of your page. */
 }
