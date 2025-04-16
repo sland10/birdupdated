@@ -95,12 +95,12 @@ ul.topnav li a.active {
     position: absolute;
  
 }
-.shero h1 {
-  font-size: 3em;
+.hero h1 {
+  font-size: 4em;
   margin: 0;
 }
-.shero p {
-  font-size: 1.2em;
+.hero p {
+  font-size: 2em;
   margin: 10px 0;
 }
 .btn {
