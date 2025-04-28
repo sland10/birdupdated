@@ -2,6 +2,7 @@
 /* CSS Document */
 * {
   box-sizing: border-box;
+  margin: auto;
 }
 .pompiere-regular {
   font-family: "Pompiere", sans-serif;
@@ -12,7 +13,6 @@ body {
   background-image: url("images/bg.png");
   background-size: cover;
   color: white;
-  margin: auto;
 }
 header {
   font-family: "Rum Raisin", sans-serif;
@@ -36,31 +36,55 @@ h3 {
   text-align: center;
 }
 /*NAVIGATION*/ /*NAVIGATION*/ /*NAVIGATION*/ /*NAVIGATION*/
-ul.topnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: hsla(194, 100%, 13%, 1.00);
-  width: 95%;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsla(187, 100%, 14%, 1.00);
+  padding: 10px 20px;
+  width: 90%;
 }
-ul.topnav li {
-  float: left;
+.logo img {
+  width: 50px;
 }
-ul.topnav li a {
-  display: block;
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+.nav-links li {
+  margin: auto;
+}
+.nav-links a {
   color: white;
-  text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
+  font-size: 18px;
 }
-ul.topnav li a:hover:not(.active) {
-  background-color: hsla(17, 100%, 45%, 1.00);
-}
-ul.topnav li a.active {
-  background-color: olive;
+.nav-links a:hover {
+  color: hsla(16, 81%, 47%, 1.00);
 }
 /* END NAVIGATION*/
+/*CONTACT FORM*/
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.form-group label {
+  margin-bottom: 5px;
+}
+.form-group input, .form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 /*CONTAINERS*/ /*CONTAINERS*/ /*CONTAINERS*/ /*CONTAINERS*/
 .container {
   width: 90%;
@@ -68,53 +92,36 @@ ul.topnav li a.active {
   padding: 20px;
 }
 .flex-container {
-  width: 98%;
   display: flex;
   margin: auto;
+  justify-content: center;
+  background-color: hsla(188, 100%, 12%, 0.80)
 }
-.flex-section {
-  margin: auto;
-  width: 50%;
-  height: 50%;
-  padding: 5px 10px;
-  font-size: 22px;
-  background-color: hsla(187, 100%, 18%, 0.95);
+.sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.section {
+  flex: 1 1 45%;
+  margin: 20px 0;
 }
 /*END CONTAINERS*/
 /*LANDING PAGE*/
 .hero {
-  background-position: center;
+  display: flex;
   align-items: center;
-  color: white;
+  justify-content: center;
   text-align: center;
 }
-.hero-content {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 10px;
-    position: absolute;
- 
+.hero img {
+  width: 70vw;
+  background-size: cover;
+  margin: auto;
 }
-.hero h1 {
-  font-size: 4em;
-  margin: 0;
-}
-.hero p {
-  font-size: 2em;
-  margin: 10px 0;
-}
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 20px;
-  background-color: #ff6347;
+.hero-text {
+  position: absolute;
   color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-.btn:hover {
-  background-color: #ff4500;
 }
 /*GALLERY CSS*/
 .row {
@@ -143,7 +150,14 @@ ul.topnav li a.active {
   margin: auto;
 }
 @media (max-width: 700px) {
-  .container, .ul.topnav, .flex-container {
+  .container, .flex-container {
     flex-direction: column;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-links li {
+    margin: 10px 0;
   }
 }
