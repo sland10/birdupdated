@@ -118,30 +118,23 @@ h3 {
   color: white;
 }
 /*GALLERY CSS*/
-.row {
-  margin: 20px;
-  padding: 28px;
+.gallery-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 20px;
 }
-/* Add padding BETWEEN each column */
-.row, .row > .column {
-  padding: 8px;
+.gallery {
+  display: flex;
+  gap: 20px;
 }
-/* Create four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
+.gallery img {
+  height: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
-/* Clear floats after rows */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* Content */
-.content {
-  background-color: white;
-  padding: 10px;
-  margin: auto;
+.gallery img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 @media (max-width: 700px) {
   .container, .flex-container {
@@ -154,4 +147,8 @@ h3 {
   .nav-links li {
     margin: 10px 0;
   }
+    
+.gallery img {
+      max-width: 200px;
+    }
 }
