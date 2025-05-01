@@ -38,11 +38,9 @@ h3 {
 /*NAVIGATION*/ /*NAVIGATION*/ /*NAVIGATION*/ /*NAVIGATION*/
 .navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 10px;
   background-color: hsla(187, 100%, 14%, 1.00);
-  padding: 10px 20px;
-  width: 90%;
+  width: 98%;
 }
 .logo img {
   width: 50px;
@@ -57,7 +55,7 @@ h3 {
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 22px;
 }
 .nav-links a:hover {
   color: hsla(16, 81%, 47%, 1.00);
@@ -97,14 +95,10 @@ h3 {
   justify-content: center;
   background-color: hsla(188, 100%, 12%, 0.80)
 }
-.sections {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
 .section {
-  flex: 1 1 45%;
-  margin: 20px 0;
+  padding: 10px;
+  margin: auto;
+  font-size: 1.3em;
 }
 /*END CONTAINERS*/
 /*LANDING PAGE*/
