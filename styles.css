@@ -41,10 +41,10 @@ h3 {
   padding: 10px;
   background-color: hsla(187, 100%, 14%, 1.00);
   width: 98%;
+  
 }
-.logo img {
-  width: 50px;
-}
+ 
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -88,6 +88,7 @@ h3 {
   width: 90%;
   margin: auto;
   padding: 20px;
+    font-size: 1.3em;
 }
 .flex-container {
   display: flex;
@@ -98,7 +99,7 @@ h3 {
 .section {
   padding: 10px;
   margin: auto;
-  font-size: 1.3em;
+  
 }
 /*END CONTAINERS*/
 /*LANDING PAGE*/
@@ -120,20 +121,23 @@ h3 {
 /*GALLERY CSS*/
 .gallery-container {
   overflow-x: auto;
-  white-space: nowrap;
-  padding: 20px;
+  padding: 30px;
 }
 .gallery {
   display: flex;
-  gap: 20px;
+  flex-wrap: nowrap;
+  gap: 5px;
 }
 .gallery img {
-  height: 300px;
+  height: auto;
+  width: 100%;
+  max-width: 300px;
   border-radius: 10px;
+  flex-shrink: 0;
   transition: transform 0.3s ease;
 }
 .gallery img:hover {
-  transform: scale(1.05);
+  transform: scale(1.5);
   cursor: pointer;
 }
 @media (max-width: 700px) {
@@ -147,8 +151,7 @@ h3 {
   .nav-links li {
     margin: 10px 0;
   }
-    
-.gallery img {
-      max-width: 200px;
-    }
+  .gallery img {
+    max-width: 200px;
+  }
 }
