@@ -1,133 +1,153 @@
 @charset "UTF-8";
 /* CSS Document */
+
+/* Global Reset */
 * {
   box-sizing: border-box;
-  margin: auto;
+  margin: 0;
+  padding: 0;
 }
-.pompiere-regular {
-  font-family: "Pompiere", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+
 body {
   background-image: url("images/bg.png");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   color: white;
+  font-family: "Pompiere", sans-serif;
 }
+
+/* Typography */
 header {
   font-family: "Rum Raisin", sans-serif;
   font-size: 60px;
-  font-style: normal;
-  margin: auto;
   text-align: center;
+  margin: 20px 0;
 }
+
 h1 {
   text-align: center;
-  color: rgba(0, 49, 62, 1.00);
+  color: rgba(0, 49, 62, 1);
   text-shadow: 2px 1px olive;
   font-size: 80px;
 }
+
+h2, h3 {
+  text-align: center;
+}
+
 h2 {
   color: orangered;
-  text-align: center;
 }
+
 h3 {
   color: darkolivegreen;
-  text-align: center;
 }
-/*NAVIGATION*/ /*NAVIGATION*/ /*NAVIGATION*/ /*NAVIGATION*/
+
+/* Navigation */
 .navbar {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   padding: 10px;
-  background-color: hsla(187, 100%, 14%, 1.00);
-  width: 98%;
-  
+  background-color: hsla(187, 100%, 14%, 1);
+  flex-wrap: wrap;
 }
- 
 
 .nav-links {
   list-style: none;
   display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
-.nav-links li {
-  margin: auto;
-}
+
 .nav-links a {
   color: white;
   text-decoration: none;
   font-size: 22px;
 }
+
 .nav-links a:hover {
-  color: hsla(16, 81%, 47%, 1.00);
+  color: hsla(16, 81%, 47%, 1);
 }
-/* END NAVIGATION*/
-/*CONTACT FORM*/
+
+/* Contact Form */
 .contact-form {
   display: flex;
   flex-direction: column;
+  padding: 20px;
 }
-.contact-form h2 {
-  margin-bottom: 20px;
-  text-align: center;
-}
+
 .form-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
 }
+
 .form-group label {
   margin-bottom: 5px;
 }
-.form-group input, .form-group textarea {
+
+.form-group input,
+.form-group textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-/*CONTAINERS*/ /*CONTAINERS*/ /*CONTAINERS*/ /*CONTAINERS*/
+
+/* Containers */
 .container {
   width: 90%;
   margin: auto;
   padding: 20px;
-    font-size: 1.3em;
+  font-size: 1.3em;
 }
+
 .flex-container {
   display: flex;
-  margin: auto;
   justify-content: center;
-  background-color: hsla(188, 100%, 12%, 0.80)
+  background-color: hsla(188, 100%, 12%, 0.8);
+  flex-wrap: wrap;
 }
+
 .section {
   padding: 10px;
-  margin: auto;
-  
+  flex: 1 1 300px;
 }
-/*END CONTAINERS*/
-/*LANDING PAGE*/
+
+/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
+  flex-wrap: wrap;
 }
+
 .hero img {
-  width: 70vw;
-  background-size: cover;
-  margin: auto;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
 }
+
 .hero-text {
   position: absolute;
   color: white;
 }
-/*GALLERY CSS*/
+
+/* Gallery */
 .gallery-container {
   overflow-x: auto;
   padding: 30px;
 }
+
 .gallery {
   display: flex;
   flex-wrap: nowrap;
   gap: 5px;
 }
+
 .gallery img {
   height: auto;
   width: 100%;
@@ -136,22 +156,68 @@ h3 {
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
+
 .gallery img:hover {
   transform: scale(1.5);
   cursor: pointer;
 }
-@media (max-width: 700px) {
-  .container, .flex-container {
-    flex-direction: column;
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+  header {
+    font-size: 48px;
   }
+
+  h1 {
+    font-size: 60px;
+  }
+
   .nav-links {
     flex-direction: column;
     align-items: center;
   }
-  .nav-links li {
-    margin: 10px 0;
+
+  .hero img {
+    width: 90vw;
   }
+
+  .gallery {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Phones (below 768px) */
+@media (max-width: 768px) {
+  header {
+    font-size: 36px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-text {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .gallery img {
-    max-width: 200px;
+    max-width: 90%;
   }
 }
