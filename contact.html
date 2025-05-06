@@ -1,14 +1,20 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8" <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" 
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact</title>
 <link href="styles.css" rel="stylesheet" type="text/css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pompiere&family=Rum+Raisin&display=swap" rel="stylesheet">
 </head>
-<header> Bird-E-Portfolio</header>
+<header>Bird-E-Portfolio</header>
 <!--NAVIGATION-->
 <nav class="navbar">        
          
@@ -25,34 +31,55 @@
   </ul>
              <img src="images/navlogo.png" width="40px" alt="Logo">        
      </nav>
-   
- 
-    
-<body>
-  <div class="container">
-<div class="flex-container">
-        <form class="contact-form">
-            <h1>Contact Us</h1>
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="comment">Comment:</label>
-                <textarea id="comment" name="comment" rows="4" required></textarea>
-            </div>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-</div>
-</body>
 
+<body>
+<div class="container">
+  <div class="flex-container">
+    <div class="section">
+      <h1>Sarah Land</h1>
+      <br>
+      <h2>Email</h2>
+      <br>
+      <p>sarahjland@gmail.com </p>
+      <br>
+      <h2>Phone</h2>
+      <br>
+      <p>(210)837-7555</p>
+      <br>
+    </div>
+    <form action="/action_page.php">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">First Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="fname" name="firstname" >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Last Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="lname" name="lastname" >
+        </div>
+      </div>
+     
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Comments</label>
+        </div>
+        <div class="col-75">
+          <textarea id="subject" name="Comment"  style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+      </div>
+
+</body>
+<footer>Sarah "Bird" Land &copy; 2025</footer>
 </html>
