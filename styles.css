@@ -63,9 +63,10 @@ footer {
   color: hsla(16, 81%, 47%, 1);
 }
 /* Contact Form */
-form{width:45%;
-margin:auto;}
-
+form {
+  width: 45%;
+  margin: auto;
+}
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
@@ -106,7 +107,6 @@ input[type=submit]:hover {
   display: table;
   clear: both;
 }
-
 /* Containers */
 .container {
   width: 90%;
@@ -128,7 +128,6 @@ input[type=submit]:hover {
   margin: 0 auto;
 }
 .section img {
-  
   width: 100%;
   height: auto;
 }
@@ -196,7 +195,6 @@ body.index-page, html.index-page {
 .flex-containerhero a:active {
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
 }
-
 /* Gallery */
 .gallery-container {
   overflow-x: auto;
@@ -219,61 +217,49 @@ body.index-page, html.index-page {
   transform: scale(1.5);
   cursor: pointer;
 }
-
-
-/*MEDIA QUERIES*/
-/* Desktop */
-
-
-/* Laptop */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .container {
-    width: 85%;
-  }
-  .flex-container {
-    flex-direction: row;
-  }
-  .section {
-    width: 40%;
-  }
-}
-
-/* Tablet Horizontal */
-@media (min-width: 768px) and (max-width: 991px) {
-  .container {
-    width: 90%;
-  }
-  .flex-container {
-    flex-direction: row;
-  }
-  .section {
-    width: 45%;
-  }
-}
-
-/* Tablet */
-@media (min-width: 576px) and (max-width: 767px) {
-  .container {
-    width: 95%;
-  }
-  .flex-container {
+/* Media Queries */
+@media (max-width: 992px) {
+  .navbar {
     flex-direction: column;
   }
   .section {
     width: 80%;
   }
-}
-
-/* Phone */
-@media (max-width: 575px) {
-  .container {
-    width: 100%;
+  .flex-containerhero {
+    width: 800px;
+    height: 800px;
   }
-  .flex-container {
+  .flex-containerhero a {
+    font-size: 2em;
+  }
+}
+@media (max-width: 768px) {
+  .navbar, .nav-links {
     flex-direction: column;
   }
   .section {
     width: 100%;
   }
+  .flex-containerhero {
+    width: 600px;
+    height: 600px;
+  }
+  .flex-containerhero a {
+    font-size: 1.5em;
+  }
 }
-
+@media (max-width: 576px) {
+  .navbar, .nav-links {
+    flex-direction: column;
+  }
+  .section {
+    width: 100%;
+  }
+  .flex-containerhero {
+    width: 400px;
+    height: 400px;
+  }
+  .flex-containerhero a {
+    font-size: 1em;
+  }
+}
