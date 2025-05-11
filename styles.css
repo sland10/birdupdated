@@ -19,6 +19,9 @@ header {
   font-size: 60px;
   text-align: center;
   margin: 20px 0;
+    
+    text-shadow: 3px 4px 6px black; 
+
 }
 h1 {
   text-align: center;
@@ -163,6 +166,7 @@ body.index-page, html.index-page {
   font-size: 6em;
   margin-top: 15px;
   font-family: "Rum Raisin", sans-serif;
+    text-shadow: 3px 4px 6px black;
 }
 .bottom {
   margin-bottom: 0;
@@ -221,6 +225,9 @@ body.index-page, html.index-page {
 @media (max-width: 992px) {
   .navbar {
     flex-direction: column;
+  }
+  .header {
+    font-size:80%;
   }
   .section {
     width: 80%;
@@ -297,5 +304,8 @@ body.index-page, html.index-page {
   .col-25, .col-75 {
     width: 100%;
     margin-top: 0;
+  }
+    .header {
+    font-size:60%;
   }
 }
